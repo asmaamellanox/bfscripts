@@ -43,7 +43,7 @@ psid_boot_override()
 
     psid=$(flint -d $device q | grep PSID: | awk '{print $2}')
     [[ "$psid" == "JD_0000000001" ]] && \
-        /opt/mlnx/scripts/bfbootmgr --force shell p
+        bfbootmgr --force shell p
 
     return 0
 }
